@@ -39,17 +39,38 @@ public class Main {
         System.out.println("Игра закончена");
     }
     public static boolean checkWin(char symb) {
-        if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-        if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return
-                true;
-        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
+        boolean column = true;
+        boolean row = true;
+        if(checkDiagonal(symb)){
+            return true;
+        }else{
+        for (int i=0;i<SIZE;i++){
+            for (int j = 0;j<SIZE;j++){
+                column = column & (map[i][j] == symb);
+                row = row & (map[j][i] == symb);
+            }
+            if (column || row)  return true;
+        }
+        }
         return false;
     }
+
+    static boolean checkDiagonal(char symb) {
+        boolean toright, toleft;
+        toright = true;
+        toleft = true;
+        for (int i=0; i<SIZE; i++) {
+            toright &= (map[i][i] == symb);
+            toleft &= (map[3-i-1][i] == symb);
+        }
+
+        if (toright || toleft)
+            return true;
+            else{
+                return false;
+        }
+    }
+
     public static boolean isMapFull() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {

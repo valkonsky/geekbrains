@@ -1,3 +1,5 @@
+package main.java;
+
 public class Swim implements SwimBehavior{
 
     public void swim(){

@@ -1,3 +1,5 @@
+package main.java;
+
 class CatRunning implements RunBehavior{
 
     @Override

@@ -1,3 +1,5 @@
+package main.java;
+
 public class DogRunning implements RunBehavior{
     @Override
     public void run(int distance) {

@@ -15,6 +15,13 @@ public class Plate {
             System.out.println("not enough food");
         }
         return false;
+
+    public int getFood() {
+        return food;
+    }
+
+    public void decreaseFood(int n){
+        food -=n;
     }
 
     public void info(){

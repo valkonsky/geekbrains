@@ -1,5 +1,3 @@
-package main.java;
-
 public class AnimalFactory {
 
     public static void getAllDogs(){

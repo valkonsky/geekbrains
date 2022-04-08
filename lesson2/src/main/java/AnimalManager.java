@@ -1,4 +1,9 @@
-public class AnimalFactory {
+package main.java;
+
+import main.java.Cat;
+import main.java.Dog;
+
+public class AnimalManager {
 
     public static void getAllDogs(){
         System.out.println(Dog.getAllDogs());

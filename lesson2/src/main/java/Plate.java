@@ -7,21 +7,18 @@ public class Plate {
         this.food = food;
     }
 
-    public boolean decreaseFood(int n){
-        if (food>=n){
-            food -=n;
+    public boolean decreaseFood(int n) {
+        if (food >= n) {
+            food -= n;
             return true;
-        }else{
+        } else {
             System.out.println("not enough food");
         }
         return false;
+    }
 
     public int getFood() {
         return food;
-    }
-
-    public void decreaseFood(int n){
-        food -=n;
     }
 
     public void info(){

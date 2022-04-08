@@ -25,12 +25,6 @@ public class Cat extends Animal{
      }
  }
 
- public void eat(Plate plate){
-     if (plate.decreaseFood(appetite)){
-         satiety = true;
-     }
- }
-
  public boolean isSatiety(){
      return satiety;
  }
